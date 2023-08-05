@@ -1,0 +1,30 @@
+{
+	"parser": "babel-eslint",
+	"env": {
+		"es2021": true,
+		"node": true //тк webpack на node.js
+	},
+	"rules": {
+		"semi": "off",
+		"arrow-parens": "off",
+		"max-len": "off",
+		"linebreak-style": "off",
+		"object-curly-spacing": "off",
+		"no-unused-vars": "off",
+		"no-tabs": "off",
+		"require-jsdoc":"off",
+		"indent": [
+			"error",
+			"tab"
+		],
+		"quotes": [
+			"error",
+			"single"
+		],
+		"comma-dangle": "off"
+	},
+	"extends": [
+		"eslint:recommended",
+		"google"
+	]
+}
