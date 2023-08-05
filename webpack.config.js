@@ -31,10 +31,10 @@ module.exports = {
 	context: path.resolve(__dirname, 'src'),
 	mode: 'development',
 	entry: [
-		// '@babel/polyfill',
+		'@babel/polyfill',
 		'./index.js'
 	],
-	// target: 'web', // позволяет исправить ошибку с runtime при rerender (связана с async await в коде основном)
+	target: 'web', // позволяет исправить ошибку с runtime при rerender (связана с async await в коде основном)
 	output: {
 		filename: filename('js'),
 		path: path.resolve(__dirname, 'dist')
@@ -85,12 +85,7 @@ module.exports = {
 			{
 				test: /\.m?js$/,
 				exclude: /node_modules/,
-				use: {
-					loader: 'babel-loader',
-					options: {
-						presets: ['@babel/preset-env']
-					}
-				}
+				use: jsLoaders()
 			},
 		],
 	},
